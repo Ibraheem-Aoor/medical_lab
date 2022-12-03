@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware'=>['Install','Locale']],function(){
+// Route::group(['middleware'=>['Install','Locale']],function(){
   include('admin.php');
   include('ajax.php');
   include('patient.php');
-});
+// });
 
 Route::get('change_locale/{lang}','HomeController@change_locale')->name('change_locale');
 
