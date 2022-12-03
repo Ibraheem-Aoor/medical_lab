@@ -15,6 +15,7 @@ class HomeController extends Controller
     */
     public function change_locale($locale)
     {
+        dd('ss');
         $language=Language::where('iso',$locale)->first();
 
         session()->put('locale',$locale);
