@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -298,7 +299,7 @@ Route::group(['namespace'=>'Patient','prefix'=>'patient','middleware'=>'Patient'
 });
 });
 
-Route::get('change_locale/{lang}','HomeController@change_locale')->name('change_locale');
+Route::get('change_locale/{lang}',[HomeController::class , 'change_locale'])->name('change_locale');
 
 Route::get('clear-cache',function(){
   \Artisan::call('cache:clear');
